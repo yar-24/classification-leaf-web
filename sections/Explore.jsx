@@ -1,5 +1,7 @@
 'use client';
 
+/* eslint-disable react/jsx-wrap-multilines */
+
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -22,7 +24,12 @@ const Explore = () => {
       >
         <TypingText title="| The Diseases" textStyles="text-center" />
         <TitleText
-          title={<>Choose the diseases leaf you want <br className="md:block hidden" /> to classification</>}
+          title={
+            <>
+              Select the leaf diseases coffee
+              <br className="md:block hidden" /> you want to know about
+            </>
+          }
           textStyles="text-center"
         />
         <div className="mt-[50px] flex lg:flex-row flex-col min-h-[70vh] gap-5">

@@ -6,20 +6,20 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Eudoxus Sans", sans-serif;
+  font-family: 'Eudoxus Sans', sans-serif;
   scroll-behavior: smooth;
 }
 
 .gradient-01 {
   background-image: linear-gradient(
     270deg,
-    hsl(121, 76%, 51%) 0%,
-    hsl(110, 70%, 73%) 26%,
-    hsl(148, 69%, 86%) 39%,
-    hsl(167, 92%, 90%) 50%,
-    hsl(197, 77%, 81%) 61%,
-    hsl(221deg 73% 70%) 74%,
-    hsl(221, 76%, 51%) 100%
+    hsl(41, 76%, 51%) 0%,
+    hsl(44, 70%, 73%) 26%,
+    hsl(36, 69%, 86%) 39%,
+    hsl(34, 92%, 90%) 50%,
+    hsl(41, 100%, 59%) 61%,
+    hsl(41, 89%, 42%) 74%,
+    hsl(28, 78%, 19%) 100%
   );
   filter: blur(125px);
 }
@@ -27,9 +27,9 @@
 .hero-gradient {
   background: linear-gradient(
     97.86deg,
-    #9adf2a 0%,
-    #34c740 53.65%,
-    #3496c7 100%
+    #603601 0%,
+    #361500 53.65%,
+    #23211c 100%
   );
 }
 
@@ -40,13 +40,13 @@
   top: 0px;
   right: 0px;
 
-  background: #7aebfb;
+  background: #6c9130;
   filter: blur(190px);
 }
 
 .glassmorphism {
   background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 135, 69, 0.37);
+  box-shadow: 0 8px 32px 0 rgba(135, 86, 31, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -59,7 +59,7 @@
   left: 20%;
   top: 5%;
 
-  background: rgba(66, 232, 113, 0.35);
+  background: rgba(155, 232, 66, 0.35);
   filter: blur(175px);
   transform: rotate(-114.2deg);
 }
@@ -71,7 +71,7 @@
   left: 30%;
   top: 10%;
 
-  background: rgba(45, 72, 152, 0.75);
+  background: rgba(75, 152, 45, 0.75);
   filter: blur(200px);
   transform: rotate(-53.13deg);
 }
@@ -91,7 +91,7 @@
   left: 0px;
   top: 0px;
 
-  background: #8d39a3;
+  background: #57a339;
   filter: blur(175px);
 }
 
@@ -102,6 +102,6 @@
   left: 37%;
   bottom: 0;
 
-  background: #65c4fa;
+  background: #65fa9e;
   filter: blur(150px);
 }

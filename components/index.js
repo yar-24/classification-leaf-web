@@ -5,6 +5,8 @@ import StartSteps from './StartSteps';
 import NewFeatures from './NewFeatures';
 import InsightCard from './InsightCard';
 import Footer from './Footer';
+import DragDrop from './DragDrop';
+import ScrollTop from './ScrollTop';
 
 export {
   Navbar,
@@ -12,7 +14,9 @@ export {
   TypingText,
   StartSteps,
   NewFeatures,
+  DragDrop,
   ExploreCard,
   InsightCard,
+  ScrollTop,
   Footer,
 };

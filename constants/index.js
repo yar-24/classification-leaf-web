@@ -1,88 +1,89 @@
 export const exploreWorlds = [
   {
-    id: 'world-1',
-    imgUrl: '/planet-01.png',
-    title: 'The Hogwarts',
+    id: 'leaf-1',
+    imgUrl: '/leaf_healthy.png',
+    title: 'Leaf Healthy',
   },
   {
-    id: 'world-2',
-    imgUrl: '/planet-02.png',
-    title: 'The Upside Down',
+    id: 'leaf-2',
+    imgUrl: '/leaf_miner.png',
+    title: 'Leaf Miner',
   },
   {
-    id: 'world-3',
-    imgUrl: '/planet-03.png',
-    title: 'Kadirojo Permai',
+    id: 'leaf-3',
+    imgUrl: '/leaf_phoma.png',
+    title: 'Leaf Phoma',
   },
   {
-    id: 'world-4',
-    imgUrl: '/planet-04.png',
-    title: 'Paradise Island',
-  },
-  {
-    id: 'world-5',
-    imgUrl: '/planet-05.png',
-    title: 'Hawkins Labs',
+    id: 'leaf-4',
+    imgUrl: '/leaf_rush.png',
+    title: 'Leaf Rush',
   },
 ];
 
 export const startingFeatures = [
-  'Find a world that suits you and you want to enter',
-  'Enter the world by reading basmalah to be safe',
-  'No need to beat around the bush, just stay on the gas and have fun',
+  'Select the image of the coffee leaf for which you want to classify the disease',
+  'Enter the image and press button classification',
+  'Wait the minute and you have output classification disease for leaf coffee',
 ];
 
-export const newFeatures = [
+export const newsFeature = [
   {
     imgUrl: '/vrpano.svg',
-    title: 'A new world',
-    subtitle:
-        'we have the latest update with new world for you to try never mind',
+    title: 'Classification realtime',
+    subtitle: 'we can classify images leaf coffee in realtime',
   },
   {
-    imgUrl: '/headset.svg',
-    title: 'More realistic',
+    imgUrl: '/plant.svg',
+    title: 'Plant care',
     subtitle:
-        'In the latest update, your eyes are narrow, making the world more realistic than ever',
+      'after receiving the classification results, this app will display how to care for coffee plants',
   },
 ];
 
 export const insights = [
   {
-    imgUrl: '/planet-06.png',
-    title: 'The launch of the Metaverse makes Elon musk ketar-ketir',
+    imgUrl: '/ai.png',
+    title: 'Apa itu Kecerdasan Buatan?',
+    url: 'https://aws.amazon.com/id/machine-learning/what-is-ai/',
     subtitle:
-        'Magna etiam tempor orci eu lobortis elementum nibh tellus molestie. Diam maecenas sed enim ut sem viverra alique.',
+      'Kecerdasan Buatan (AI) adalah bidang ilmu komputer yang dikhususkan untuk memecahkan masalah kognitif yang umumnya terkait dengan kecerdasan manusia, seperti pembelajaran ...',
   },
   {
-    imgUrl: '/planet-07.png',
-    title: '7 tips to easily master the madness of the Metaverse',
+    imgUrl: '/cnn.png',
+    title: 'Convolution Neural Network for leaf disease detection',
+    url: 'https://media.neliti.com/media/publications/429620-convolution-neural-network-for-leaf-dise-7aae20ab.pdf',
     subtitle:
-        'Vitae congue eu consequat ac felis donec. Et magnis dis parturient montes nascetur ridiculus mus. Convallis tellus id interdum',
+      'Plants are the major source of food for all kinds of living beings. With the increase in population, it is now more important to keep this supply continue. To cop-up ...',
   },
   {
-    imgUrl: '/planet-08.png',
-    title: 'With one platform you can explore the whole world virtually',
+    imgUrl: '/leaf.png',
+    title: 'List of coffee diseases',
+    url: 'https://en.wikipedia.org/wiki/List_of_coffee_diseases',
     subtitle:
-        'Quam quisque id diam vel quam elementum. Viverra nam libero justo laoreet sit amet cursus sit. Mauris in aliquam sem',
+      'Red blister disease (robusta coffee), Cercospora coffeicola ; Red root rot, Ganoderma philippii ; Rust (orange or leaf rust), Hemileia vastatrix ; Rust (powdery or ...',
   },
 ];
 
 export const socials = [
   {
     name: 'twitter',
-    url: '/twitter.svg',
+    src: '/twitter.svg',
+    url: '',
   },
   {
     name: 'linkedin',
-    url: '/linkedin.svg',
+    src: '/linkedin.svg',
+    url: 'https://www.linkedin.com/in/akhyar-ramadhan24',
   },
   {
     name: 'instagram',
-    url: '/instagram.svg',
+    src: '/instagram.svg',
+    url: 'https://www.instagram.com/artyardhan',
   },
   {
     name: 'facebook',
-    url: '/facebook.svg',
+    src: '/facebook.svg',
+    url: 'https://www.facebook.com/akhyar.ramadhan.24/',
   },
 ];

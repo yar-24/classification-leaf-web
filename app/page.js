@@ -1,8 +1,19 @@
-import { Footer, Navbar } from '../components';
-import { About, Explore, Feedback, GetStarted, Hero, Insights, WhatsNew, World } from '../sections';
+import { Parallax } from 'react-parallax';
+import { Footer, Navbar, ScrollTop } from '../components';
+import {
+  About,
+  Explore,
+  Feedback,
+  HowWork,
+  Hero,
+  Insights,
+  WhatsFeature,
+  GetStarted,
+} from '../sections';
 
 const Page = () => (
   <div className="bg-primary-black overflow-hidden">
+    {/* <ScrollTop /> */}
     <Navbar />
     <Hero />
     <div className="relative">
@@ -11,11 +22,18 @@ const Page = () => (
       <Explore />
     </div>
     <div className="relative">
-      <GetStarted />
+      <WhatsFeature />
       <div className="gradient-04 z-0" />
-      <WhatsNew />
+      <HowWork />
     </div>
-    <World />
+    <Parallax
+      blur={5}
+      bgImage="parallax.png"
+      bgImageAlt="the cat"
+      strength={500}
+    >
+      <GetStarted />
+    </Parallax>
     <div className="relative">
       <Insights />
       <div className="gradient-04 z-0" />

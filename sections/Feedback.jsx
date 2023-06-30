@@ -21,17 +21,17 @@ const Feedback = () => (
         <div className="feedback-gradient" />
         <div>
           <h4 className="font-bold sm:text-[32px] text-[26px] sm:leading-[40.32px] leading-[36.32px] text-white">
-            Samantha
+            Elon Musk
           </h4>
           <p className="mt-[8px] font-normal sm:text-[18px] text-[12px] sm:leading-[22.68px] leading-[16.68px] text-white">
-            Founder Metaverus
+            Founder Tesla
           </p>
         </div>
 
         <p className="mt-[24px] font-normal sm:text-[24px] text-[18px] sm:leading-[45.6px] leading-[39.6px] text-white">
-          “With the development of today's technology, metaverse is very
-          useful for today's work, or can be called web 3.0. by using
-          metaverse you can use it as anything”
+          “I think we should be very careful about artificial intelligence. If I
+          had to guess at what our biggest existential threat is, it’s probably
+          that. So we need to be very careful.”
         </p>
       </motion.div>
 
@@ -40,7 +40,7 @@ const Feedback = () => (
         className="relative flex-1 flex justify-center items-center"
       >
         <img
-          src="/planet-09.png"
+          src="/ai2.png"
           alt="planet-09"
           className="w-full lg:h-[610px] h-auto min-h-[210px] object-cover rounded-[40px]"
         />
@@ -50,7 +50,7 @@ const Feedback = () => (
           className="lg:block hidden absolute -left-[10%] top-[3%]"
         >
           <img
-            src="/stamp.png"
+            src="/elon-musk.png"
             alt="stamp"
             className="w-[155px] h-[155px] object-contain"
           />

@@ -6,6 +6,7 @@ import styles from '../styles';
 import { newsFeature } from '../constants';
 import { NewFeatures, TitleText, TypingText } from '../components';
 import { planetVariants, staggerContainer, fadeIn } from '../utils/motion';
+import Image from 'next/image';
 
 const WhatsFeature = () => (
   <section className={`${styles.paddings} relative z-20`}>
@@ -33,8 +34,10 @@ const WhatsFeature = () => (
         variants={planetVariants('right')}
         className={`flex-1 ${styles.flexCenter}`}
       >
-        <img
+        <Image
           src="/what-feature.png"
+          width={200}
+          height={200}
           alt="get-started"
           className="w-[90%] h-[90%] object-contain"
         />

@@ -30,7 +30,7 @@ const Home = () => (
       blur={5}
       bgImage="parallax.png"
       bgImageAlt="the cat"
-      strength={500}
+      strength={300}
     >
       <GetStarted />
     </Parallax>

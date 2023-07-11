@@ -1,8 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { useState, useRef, useEffect } from 'react';
 import * as tf from '@tensorflow/tfjs';
+import { useState, useRef, useEffect } from 'react';
 
 const DragDrop = () => {
   const [file, setFile] = useState();
@@ -27,7 +27,7 @@ const DragDrop = () => {
   const onSelecFile = async (event) => {
     const file = event.target.files[0];
     let image = new Image(256, 256);
-    image.src = window.URL.createObjectURL(event.target.files[0]);
+    image.src = window.URL.createObjectURL(file);
     setFile(image);
     setImagePreview(URL.createObjectURL(file));
   };
@@ -49,7 +49,7 @@ const DragDrop = () => {
       setIsDragging(false);
       const file = event.dataTransfer.files[0];
       let image = new Image(256, 256);
-      image.src = window.URL.createObjectURL(event.dataTransfer.files[0]);
+      image.src = window.URL.createObjectURL(file);
       setFile(image);
       setImagePreview(URL.createObjectURL(file));
     } catch (err) {
@@ -109,6 +109,7 @@ const DragDrop = () => {
             X
           </button>
         </div>
+
         {predict ? (
           <>
             <button

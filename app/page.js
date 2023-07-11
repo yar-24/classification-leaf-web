@@ -1,5 +1,5 @@
 import { Parallax } from 'react-parallax';
-import { Footer, Navbar, ScrollTop } from '../components';
+import { Footer, Navbar } from '../components';
 import {
   About,
   Explore,
@@ -13,7 +13,6 @@ import {
 
 const Page = () => (
   <div className="bg-primary-black overflow-hidden">
-    {/* <ScrollTop /> */}
     <Navbar />
     <Hero />
     <div className="relative">
@@ -30,7 +29,7 @@ const Page = () => (
       blur={5}
       bgImage="parallax.png"
       bgImageAlt="the cat"
-      strength={500}
+      strength={300}
     >
       <GetStarted />
     </Parallax>

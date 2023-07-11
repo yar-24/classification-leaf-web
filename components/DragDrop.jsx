@@ -139,12 +139,11 @@ const DragDrop = () => {
                 <h3 className="font-bold mr-3">Confidence : </h3>
                 <p>{(parseFloat(predict.confidence) * 100).toFixed(2)} %</p>
               </div>
-              <Link
-                className="text-sm underline"
-                href={`/${predict.class !== 'nodisease' ? predict.class : '/'}`}
-              >
-                How to care?
-              </Link>
+              {predict.class !== 'Healthy' ? (
+                <Link className="text-sm underline" href={`/${predict.class}`}>
+                  How to care?
+                </Link>
+              ) : null}
             </div>
           </>
         ) : (

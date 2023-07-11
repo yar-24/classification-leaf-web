@@ -7,6 +7,7 @@ import { useState, useRef, useEffect } from 'react';
 const DragDrop = () => {
   const [file, setFile] = useState();
   const [isDragging, setIsDragging] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [imagePreview, setImagePreview] = useState(null);
   const [predict, setPredict] = useState();
   const [model, setModel] = useState();
@@ -16,8 +17,10 @@ const DragDrop = () => {
     async function fetchData() {
       const model = await tf.loadLayersModel('./tfjs_model/model.json');
       setModel(model);
+      setLoading(true);
     }
     fetchData();
+    setLoading(false);
   }, [setModel]);
 
   const selectFile = () => {
@@ -58,7 +61,7 @@ const DragDrop = () => {
   };
 
   const handleUpload = async () => {
-    const label = ['miner', 'nodisease', 'phoma', 'rust'];
+    const label = ['Miner', 'Healthy', 'Phoma', 'Rust'];
 
     let tfTensor = tf.browser.fromPixels(file);
     tfTensor = tfTensor.resizeNearestNeighbor([256, 256]);
@@ -76,7 +79,11 @@ const DragDrop = () => {
 
     pred.sort((x, y) => y.confidence - x.confidence);
 
-    setPredict(pred[0]);
+    setTimeout(() => {
+      setPredict(pred[0]);
+      setLoading(true);
+    }, 1500);
+    setLoading(false);
   };
 
   const clearData = () => {
@@ -95,7 +102,6 @@ const DragDrop = () => {
                 src={imagePreview}
                 alt={file.name}
               />
-              {/* <canvas id="canvas" width={256} height={256}></canvas> */}
             </>
           ) : (
             <span className="flex-1 ml-[30px] font-normal text-[20px] text-white leading-[32.4px]">
@@ -124,7 +130,7 @@ const DragDrop = () => {
               />
               <span className="font-normal text-[16px]">Clear</span>
             </button>{' '}
-            <div className="p-4 mt-5 w-auto h-auto rounded-md bg-[#323F5D] text-white text-2xl">
+            <div className="p-4 mt-5 w-auto h-auto rounded-md bg-[#323F5D] text-white md:text-3xl">
               <div className="flex">
                 <h3 className="font-bold mr-3">Disease : </h3>
                 <p>{predict.class}</p>
@@ -145,14 +151,21 @@ const DragDrop = () => {
           <button
             type="button"
             onClick={handleUpload}
-            className="flex items-center h-fit py-4 px-6 hero-gradient hover: rounded-[32px] gap-[12px] text-white"
+            className={`flex items-center h-fit py-4 px-6 hero-gradient hover: rounded-[32px] gap-[12px] text-white ${
+              !loading ? 'disabled:opacity-70' : 'block'
+            }`}
+            disabled={!loading}
           >
             <img
               src="/scan.svg"
               alt="headset"
               className="w-[24px] h-[24px] object-contain"
             />
-            <span className="font-normal text-[16px]">Classification</span>
+            {loading ? (
+              <span className="font-normal text-[16px]">Classification</span>
+            ) : (
+              <span className="font-normal text-[16px]">Loading...</span>
+            )}
           </button>
         )}
       </div>

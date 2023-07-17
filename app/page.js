@@ -1,18 +1,17 @@
-import { Parallax } from 'react-parallax';
-import { Footer, Navbar } from '../components';
+import { Parallax } from "react-parallax";
+import { Footer, Navbar } from "../components";
 import {
   About,
   Explore,
-  Feedback,
   HowWork,
   Hero,
   Insights,
   WhatsFeature,
   GetStarted,
-} from '../sections';
+} from "../sections";
 
 const Page = () => (
-  <div className="bg-primary-black overflow-hidden">
+  <div className="relative bg-primary-black overflow-hidden">
     <Navbar />
     <Hero />
     <div className="relative">
@@ -36,7 +35,6 @@ const Page = () => (
     <div className="relative">
       <Insights />
       <div className="gradient-04 z-0" />
-      <Feedback />
     </div>
     <Footer />
   </div>

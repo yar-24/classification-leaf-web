@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import * as tf from '@tensorflow/tfjs';
-import { useState, useRef, useEffect } from 'react';
+import * as tf from "@tensorflow/tfjs";
+import Link from "next/link";
+import { useState, useRef, useEffect } from "react";
 
 const DragDrop = () => {
   const [file, setFile] = useState();
@@ -15,7 +15,7 @@ const DragDrop = () => {
 
   useEffect(() => {
     async function fetchData() {
-      const model = await tf.loadLayersModel('./tfjs_model/model.json');
+      const model = await tf.loadLayersModel("./tfjs_model/model.json");
       setModel(model);
       setLoading(true);
     }
@@ -38,7 +38,7 @@ const DragDrop = () => {
   const handleDragOver = (event) => {
     event.preventDefault();
     setIsDragging(true);
-    event.dataTransfer.dropEffect = 'copy';
+    event.dataTransfer.dropEffect = "copy";
   };
 
   const handleDragLeave = (event) => {
@@ -61,7 +61,7 @@ const DragDrop = () => {
   };
 
   const handleUpload = async () => {
-    const label = ['Miner', 'Healthy', 'Phoma', 'Rust'];
+    const label = ["Miner", "Sehat", "Phoma", "Rust"];
 
     let tfTensor = tf.browser.fromPixels(file);
     tfTensor = tfTensor.resizeNearestNeighbor([256, 256]);
@@ -128,20 +128,23 @@ const DragDrop = () => {
                 alt="headset"
                 className="w-[24px] h-[24px] object-contain"
               />
-              <span className="font-normal text-[16px]">Clear</span>
-            </button>{' '}
+              <span className="font-normal text-[16px]">Hapus</span>
+            </button>{" "}
             <div className="p-4 mt-5 w-auto h-auto rounded-md bg-[#323F5D] text-white md:text-3xl">
               <div className="flex">
-                <h3 className="font-bold mr-3">Disease : </h3>
+                <h3 className="font-bold mr-3">Penyakit : </h3>
                 <p>{predict.class}</p>
               </div>
               <div className="flex">
                 <h3 className="font-bold mr-3">Confidence : </h3>
                 <p>{(parseFloat(predict.confidence) * 100).toFixed(2)} %</p>
               </div>
-              {predict.class !== 'Healthy' ? (
-                <Link className="text-sm underline" href={`/${predict.class}`}>
-                  How to care?
+              {predict.class !== "Healthy" ? (
+                <Link
+                  className="text-sm underline"
+                  href={`/${predict.class.toLowerCase()}`}
+                >
+                  Cara Perawatan?
                 </Link>
               ) : null}
             </div>
@@ -151,7 +154,7 @@ const DragDrop = () => {
             type="button"
             onClick={handleUpload}
             className={`flex items-center h-fit py-4 px-6 hero-gradient hover: rounded-[32px] gap-[12px] text-white ${
-              !loading ? 'disabled:opacity-70' : 'block'
+              !loading ? "disabled:opacity-70" : "block"
             }`}
             disabled={!loading}
           >
@@ -161,7 +164,7 @@ const DragDrop = () => {
               className="w-[24px] h-[24px] object-contain"
             />
             {loading ? (
-              <span className="font-normal text-[16px]">Classification</span>
+              <span className="font-normal text-[16px]">Klasifikasi</span>
             ) : (
               <span className="font-normal text-[16px]">Loading...</span>
             )}
@@ -178,9 +181,9 @@ const DragDrop = () => {
       onDrop={handleDrop}
     >
       <h1 className="font-bold text-[24px] leading-[30.24px] text-center">
-        Drag and Drop File to Classify
+        Drag dan Drop File untuk klasifikasi
       </h1>
-      <h1 className="font-bold text-[20px] leading-[30.24px] my-5">Or</h1>
+      <h1 className="font-bold text-[20px] leading-[30.24px] my-5">atau</h1>
       <input
         type="file"
         onChange={onSelecFile}
@@ -195,10 +198,10 @@ const DragDrop = () => {
       >
         <img
           src="/upload.svg"
-          alt="headset"
+          alt="upload"
           className="w-[24px] h-[24px] object-contain"
         />
-        <span className="font-normal text-[16px]">Select Files</span>
+        <span className="font-normal text-[16px]">Pilih File</span>
       </button>
     </div>
   );

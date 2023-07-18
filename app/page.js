@@ -1,5 +1,5 @@
-import { Parallax } from "react-parallax";
-import { Footer, Navbar } from "../components";
+import { Parallax } from 'react-parallax';
+import { Footer, Navbar } from '../components';
 import {
   About,
   Explore,
@@ -8,7 +8,7 @@ import {
   Insights,
   WhatsFeature,
   GetStarted,
-} from "../sections";
+} from '../sections';
 
 const Page = () => (
   <div className="relative bg-primary-black overflow-hidden">

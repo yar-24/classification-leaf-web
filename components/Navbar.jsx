@@ -1,14 +1,15 @@
-import { motion } from "framer-motion";
-import styles from "../styles";
-import { useState } from "react";
-import { navVariants } from "../utils/motion";
-import { slideIn } from "../utils/motion";
+import { motion } from 'framer-motion';
+import styles from '../styles';
+import { useState } from 'react';
+import { navVariants } from '../utils/motion';
+import { slideIn } from '../utils/motion';
+import { Link } from 'react-scroll';
 
 export const ResponsiveBar = ({ handleOpen }) => {
   return (
     <motion.div
-      variants={slideIn("right", "tween", 0.2, 1)}
-      className="fixed z-50 w-[80%] md:w-[30%] h-[100%] top-0 right-0 glassmorphism"
+      variants={slideIn('right', 'tween', 0.2, 1)}
+      className="fixed z-50 w-[60%] md:w-[30%] h-[100%] top-0 right-0 glassNavbar"
     >
       <button className="absolute right-3 top-3" onClick={handleOpen}>
         <img
@@ -20,25 +21,88 @@ export const ResponsiveBar = ({ handleOpen }) => {
       <div>
         <ul className="mt-12 ml-5">
           <li className={styles.listNav}>
-            <a href="#home">Home</a>
+            <Link
+              activeClass="active"
+              to="home"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              Home
+            </Link>
           </li>
           <li className={styles.listNav}>
-            <a href="#tentang">Tentang</a>
+            <Link
+              activeClass="active"
+              to="tentang"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              Tentang
+            </Link>
           </li>
           <li className={styles.listNav}>
-            <a href="#penyakit">Penyakit</a>
+            <Link
+              activeClass="active"
+              to="penyakit"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              Penyakit
+            </Link>
           </li>
           <li className={styles.listNav}>
-            <a href="#fitur">Fitur</a>
+            <Link
+              activeClass="active"
+              to="fitur"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              Fitur
+            </Link>
           </li>
           <li className={styles.listNav}>
-            <a href="#kerja">Kerja</a>
+            <Link
+              activeClass="active"
+              to="kerja"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              Kerja
+            </Link>
           </li>
           <li className={styles.listNav}>
-            <a href="#klasifikasi">Klasifikasi</a>
+            <Link
+              activeClass="active"
+              to="klasifikasi"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              Klasifikasi
+            </Link>
           </li>
           <li className={styles.listNav}>
-            <a href="#wawasan">Wawasan</a>
+            <Link
+              activeClass="active"
+              to="wawasan"
+              spy={true}
+              smooth={true}
+              offset={70}
+              duration={500}
+            >
+              Wawasan
+            </Link>
           </li>
         </ul>
       </div>

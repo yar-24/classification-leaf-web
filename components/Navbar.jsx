@@ -9,7 +9,7 @@ export const ResponsiveBar = ({ handleOpen, open }) => {
   return (
     <div
       className={`fixed z-50 w-[60%] md:w-[30%] h-[100%] top-0 right-0 glassNavbar ${
-        open ? 'translate-x-full' : 'translate-x-0'
+        open ? 'translate-x-0' : 'translate-x-full'
       } duration-200 translate-all ease-in-out`}
     >
       <button className="absolute right-5 top-5" onClick={handleOpen}>

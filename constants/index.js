@@ -39,19 +39,19 @@ export const exploreWorlds = [
   {
     id: 'leaf-2',
     imgUrl: '/leaf_miner.png',
-    url: '/Miner',
+    url: '/miner',
     title: 'Daun Miner',
   },
   {
     id: 'leaf-3',
     imgUrl: '/leaf_phoma.png',
-    url: '/Phoma',
+    url: '/phoma',
     title: 'Daun Phoma',
   },
   {
     id: 'leaf-4',
     imgUrl: '/leaf_rush.png',
-    url: '/Rust',
+    url: '/rust',
     title: 'Daun Rust',
   },
 ];

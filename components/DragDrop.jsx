@@ -136,7 +136,7 @@ const DragDrop = () => {
                 <p>{predict.class}</p>
               </div>
               <div className="flex">
-                <h3 className="font-bold mr-3">Confidence : </h3>
+                <h3 className="font-bold mr-3">Akurasi : </h3>
                 <p>{(parseFloat(predict.confidence) * 100).toFixed(2)} %</p>
               </div>
               {predict.class !== 'Healthy' ? (

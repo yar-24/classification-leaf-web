@@ -1,6 +1,6 @@
-"use client";
-import { Parallax } from "react-parallax";
-import { Footer, Navbar } from "../components";
+'use client';
+import { Parallax } from 'react-parallax';
+import { Footer, Navbar } from '../components';
 import {
   About,
   Explore,
@@ -9,7 +9,7 @@ import {
   Insights,
   WhatsFeature,
   GetStarted,
-} from "../sections";
+} from '../sections';
 
 const Home = () => {
   return (
@@ -27,14 +27,16 @@ const Home = () => {
         <div className="gradient-04 z-0" />
         <HowWork />
       </div>
-      <Parallax
-        blur={5}
-        bgImage="parallax.png"
-        bgImageAlt="the cat"
-        strength={300}
-      >
-        <GetStarted />
-      </Parallax>
+      <div>
+        <Parallax
+          blur={5}
+          bgImage="parallax.png"
+          bgImageAlt="the cat"
+          strength={300}
+        >
+          <GetStarted />
+        </Parallax>
+      </div>
       <div className="relative">
         <Insights />
         <div className="gradient-04 z-0" />

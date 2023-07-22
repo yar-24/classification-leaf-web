@@ -22,11 +22,11 @@ const InsightCard = ({ imgUrl, title, subtitle, url, index }) => (
         <a
           href={url}
           target="_blank"
-          className="font-normal lg:text-[42px] text-[26px] text-white leading-10 hover:text-secondary-white"
+          className="font-normal lg:text-[42px] text-[24px] text-white leading-10 hover:text-secondary-white"
         >
           {title}
         </a>
-        <p className="mt-[16px] font-normal lg:text-[20px] text-[14px] text-secondary-white">
+        <p className="text-wrap mt-[16px] font-normal lg:text-[20px] text-[14px] text-secondary-white">
           {subtitle}
         </p>
       </div>
@@ -39,7 +39,7 @@ const InsightCard = ({ imgUrl, title, subtitle, url, index }) => (
         <img
           src="/arrow.svg"
           alt="arrow"
-          className="w-[40%] h-[40%] object-contain"
+          className="w-[40%] h-[40%] object-contain hover:-rotate-90"
         />
       </a>
     </div>

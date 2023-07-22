@@ -2,16 +2,17 @@ import { motion } from 'framer-motion';
 import styles from '../styles';
 import { useState } from 'react';
 import { navVariants } from '../utils/motion';
-import { slideIn } from '../utils/motion';
 import { Link } from 'react-scroll';
+import { navLink } from '../constants';
 
-export const ResponsiveBar = ({ handleOpen }) => {
+export const ResponsiveBar = ({ handleOpen, open }) => {
   return (
-    <motion.div
-      variants={slideIn('right', 'tween', 0.2, 1)}
-      className="fixed z-50 w-[60%] md:w-[30%] h-[100%] top-0 right-0 glassNavbar"
+    <div
+      className={`fixed z-50 w-[60%] md:w-[30%] h-[100%] top-0 right-0 glassNavbar ${
+        open ? 'translate-x-full' : 'translate-x-0'
+      } duration-200 translate-all ease-in-out`}
     >
-      <button className="absolute right-3 top-3" onClick={handleOpen}>
+      <button className="absolute right-5 top-5" onClick={handleOpen}>
         <img
           src="/cross.svg"
           alt="x"
@@ -20,93 +21,23 @@ export const ResponsiveBar = ({ handleOpen }) => {
       </button>
       <div>
         <ul className="mt-12 ml-5">
-          <li className={styles.listNav}>
-            <Link
-              activeClass="active"
-              to="home"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-            >
-              Home
-            </Link>
-          </li>
-          <li className={styles.listNav}>
-            <Link
-              activeClass="active"
-              to="tentang"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-            >
-              Tentang
-            </Link>
-          </li>
-          <li className={styles.listNav}>
-            <Link
-              activeClass="active"
-              to="penyakit"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-            >
-              Penyakit
-            </Link>
-          </li>
-          <li className={styles.listNav}>
-            <Link
-              activeClass="active"
-              to="fitur"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-            >
-              Fitur
-            </Link>
-          </li>
-          <li className={styles.listNav}>
-            <Link
-              activeClass="active"
-              to="kerja"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-            >
-              Kerja
-            </Link>
-          </li>
-          <li className={styles.listNav}>
-            <Link
-              activeClass="active"
-              to="klasifikasi"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-            >
-              Klasifikasi
-            </Link>
-          </li>
-          <li className={styles.listNav}>
-            <Link
-              activeClass="active"
-              to="wawasan"
-              spy={true}
-              smooth={true}
-              offset={70}
-              duration={500}
-            >
-              Wawasan
-            </Link>
-          </li>
+          {navLink.map((nav, index) => (
+            <li className={styles.listNav} key={index}>
+              <Link
+                activeClass="active"
+                to={nav.to}
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                {nav.title}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
@@ -147,7 +78,7 @@ const Navbar = () => {
           </button>
         </div>
       </motion.nav>
-      {open ? <ResponsiveBar handleOpen={handleOpen} /> : null}
+      <ResponsiveBar handleOpen={handleOpen} open={open} />
     </>
   );
 };

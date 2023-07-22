@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
-import styles from "../styles";
-import { DragDrop, TitleText, TypingText } from "../components";
-import { fadeIn, staggerContainer } from "../utils/motion";
+import styles from '../styles';
+import { DragDrop, TitleText, TypingText } from '../components';
+import { fadeIn, staggerContainer } from '../utils/motion';
 
 const GetStarted = () => (
   <section className={`${styles.paddings} relative z-20`} id="klasifikasi">
@@ -16,10 +16,12 @@ const GetStarted = () => (
       className={`${styles.innerWidth} mx-auto flex flex-col items-center`}
     >
       <TypingText title="| Memulai klasifikasi" textStyles="text-center" />
-      <TitleText title={<>Pilih atau drag & drop</>} textStyles="text-center" />
-
+      <TitleText
+        title={<>Memulai klasifikasi daun kopi</>}
+        textStyles="text-center"
+      />
       <motion.div
-        variants={fadeIn("up", "tween", 0.3, 1)}
+        variants={fadeIn('up', 'tween', 0.3, 1)}
         className="relative mt-[68px] w-full flex flex-col items-center"
       >
         <DragDrop />

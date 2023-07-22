@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
-import styles from "../styles";
-import { startingFeatures } from "../constants";
-import { StartSteps, TitleText, TypingText } from "../components";
-import { staggerContainer, fadeIn, planetVariants } from "../utils/motion";
-import Image from "next/image";
+import styles from '../styles';
+import { startingFeatures } from '../constants';
+import { StartSteps, TitleText, TypingText } from '../components';
+import { staggerContainer, fadeIn, planetVariants } from '../utils/motion';
+import Image from 'next/image';
 
 const HowWork = () => (
   <section className={`${styles.paddings} relative z-20`} id="kerja">
@@ -18,7 +18,7 @@ const HowWork = () => (
       className={`${styles.innerWidth} mx-auto flex lg:flex-row flex-col gap-8`}
     >
       <motion.div
-        variants={planetVariants("left")}
+        variants={planetVariants('left')}
         className={`flex-1 ${styles.flexCenter}`}
       >
         <Image
@@ -30,16 +30,16 @@ const HowWork = () => (
         />
       </motion.div>
       <motion.div
-        variants={fadeIn("left", "tween", 0.2, 1)}
+        variants={fadeIn('left', 'tween', 0.2, 1)}
         className="flex-[0.75] flex justify-center flex-col"
       >
         <TypingText title="| Cara kerja klasifikasi" />
-        <TitleText title={<>Memulai klasifikasi daun</>} />
+        <TitleText title={<>Bagaimana cara klasifikasi daun?</>} />
         <div className="mt-[31px] flex flex-col max-w-[370px] gap-[24px]">
           {startingFeatures.map((feature, index) => (
             <StartSteps
               key={feature}
-              number={`${index < 10 ? "0" : ""} ${index + 1}`}
+              number={`${index < 10 ? '0' : ''} ${index + 1}`}
               text={feature}
             />
           ))}

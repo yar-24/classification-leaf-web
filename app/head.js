@@ -1,29 +1,5 @@
-import Head from "next/head";
-
-import "../styles/globals.css";
-import { useState } from "react";
-import LocaleContext from "../utils/localeContext";
-
-export function Language() {
-  const [locale, setLanguage] = useState(
-    localStorage.getItem("locale") || "en"
-  );
-
-  const changeLocale = (newLocale) => {
-    localStorage.setItem("locale", newLocale);
-    setLanguage(newLocale);
-  };
-
-  const localeContextValue = React.useMemo(
-    () => ({ locale, changeLocale }),
-    [locale]
-  );
-  return (
-    <LocaleContext.Provider value={localeContextValue}>
-      <MyApp />
-    </LocaleContext.Provider>
-  );
-}
+import Head from 'next/head';
+import '../styles/globals.css';
 
 const MyApp = ({ Component, pageProps }) => (
   <>

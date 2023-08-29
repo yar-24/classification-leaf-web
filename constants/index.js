@@ -65,9 +65,9 @@ export const startingFeatures = [
 export const newsFeature = [
   {
     imgUrl: '/vrpano.svg',
-    title: 'Klasifikasi realtime',
+    title: 'Klasifikasi cepat',
     subtitle:
-      'aplikasi ini dapat mengklasifikasi gambar daun kopi secara realtime',
+      'aplikasi ini dapat mengklasifikasi gambar daun kopi dengan cepat',
   },
   {
     imgUrl: '/plant.svg',

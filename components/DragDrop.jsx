@@ -139,7 +139,7 @@ const DragDrop = () => {
                 <h3 className="font-bold mr-3">Akurasi : </h3>
                 <p>{(parseFloat(predict.confidence) * 100).toFixed(2)} %</p>
               </div>
-              {predict.class !== 'Healthy' ? (
+              {predict.class !== 'Sehat' ? (
                 <Link
                   className="text-sm underline"
                   href={`/${predict.class.toLowerCase()}`}
